@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Airboard_API
 {
@@ -11,6 +12,11 @@ namespace Airboard_API
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+
+            // CORS 
+            string origin = "http://airboard-api.gear.host/api/";
+            EnableCorsAttribute cors = new EnableCorsAttribute(origin, "*", "GET");
+            config.EnableCors(cors);
 
             // Web API routes
             config.MapHttpAttributeRoutes();

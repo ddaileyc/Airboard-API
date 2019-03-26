@@ -14,7 +14,7 @@ namespace Airboard_API
             // Web API configuration and services
 
             // CORS 
-            string origin = "http://airboard-api.gear.host/api/";
+            string origin = "http://airboard.gear.host";
             EnableCorsAttribute cors = new EnableCorsAttribute(origin, "*", "GET");
             config.EnableCors(cors);
 

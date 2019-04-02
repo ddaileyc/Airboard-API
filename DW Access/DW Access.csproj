@@ -72,6 +72,9 @@
     <Compile Include="dwDistribucionGenero.cs">
       <DependentUpon>DW Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="dwGananciasTotales.cs">
+      <DependentUpon>DW Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="dwMapaTopDestinos.cs">
       <DependentUpon>DW Model.tt</DependentUpon>
     </Compile>

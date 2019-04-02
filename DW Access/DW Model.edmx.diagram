@@ -11,6 +11,7 @@
         <EntityTypeShape EntityType="dwdashboardModel.dwTiempoVuelosEnRetraso" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dwdashboardModel.dwTopAerolineas" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dwdashboardModel.dwVuelosPorEstado" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dwdashboardModel.dwGananciasTotales" Width="1.5" PointX="7.125" PointY="1.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

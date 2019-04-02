@@ -31,5 +31,6 @@ namespace DW_Access
         public virtual DbSet<dwTiempoVuelosEnRetraso> dwTiempoVuelosEnRetraso { get; set; }
         public virtual DbSet<dwTopAerolineas> dwTopAerolineas { get; set; }
         public virtual DbSet<dwVuelosPorEstado> dwVuelosPorEstado { get; set; }
+        public virtual DbSet<dwGananciasTotales> dwGananciasTotales { get; set; }
     }
 }

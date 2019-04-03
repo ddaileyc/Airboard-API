@@ -170,6 +170,7 @@
     <Compile Include="Controllers\CantidadMaletasController.cs" />
     <Compile Include="Controllers\DistribucionGeneroController.cs" />
     <Compile Include="Controllers\EstadoVuelosController.cs" />
+    <Compile Include="Controllers\GananciasPerdidasController.cs" />
     <Compile Include="Controllers\GananciasTotalesController.cs" />
     <Compile Include="Controllers\TiempoRetrasoController.cs" />
     <Compile Include="Controllers\TopAerolineasController.cs" />

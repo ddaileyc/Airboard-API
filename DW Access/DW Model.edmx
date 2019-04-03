@@ -20,6 +20,14 @@
           <Property Name="Porcentaje" Type="decimal" Precision="5" Scale="2" />
           <Property Name="Indice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
+        <EntityType Name="dwGananciasPerdidas">
+          <Key>
+            <PropertyRef Name="Indice" />
+          </Key>
+          <Property Name="Ganancias" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="Perdidas" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="Indice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
         <EntityType Name="dwGananciasTotales">
           <Key>
             <PropertyRef Name="Indice" />
@@ -66,6 +74,7 @@
         <EntityContainer Name="dwdashboardModelStoreContainer">
           <EntitySet Name="dwCantidadMaletasPasajero" EntityType="Self.dwCantidadMaletasPasajero" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dwDistribucionGenero" EntityType="Self.dwDistribucionGenero" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dwGananciasPerdidas" EntityType="Self.dwGananciasPerdidas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dwGananciasTotales" EntityType="Self.dwGananciasTotales" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dwMapaTopDestinos" EntityType="Self.dwMapaTopDestinos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dwTiempoVuelosEnRetraso" EntityType="Self.dwTiempoVuelosEnRetraso" Schema="dbo" store:Type="Tables" />
@@ -135,12 +144,21 @@
           <EntitySet Name="dwTopAerolineas" EntityType="Self.dwTopAerolineas" />
           <EntitySet Name="dwVuelosPorEstado" EntityType="Self.dwVuelosPorEstado" />
           <EntitySet Name="dwGananciasTotales" EntityType="dwdashboardModel.dwGananciasTotales" />
+          <EntitySet Name="dwGananciasPerdidas" EntityType="dwdashboardModel.dwGananciasPerdidas" />
         </EntityContainer>
         <EntityType Name="dwGananciasTotales">
           <Key>
             <PropertyRef Name="Indice" />
           </Key>
           <Property Name="Monto" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="Indice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="dwGananciasPerdidas">
+          <Key>
+            <PropertyRef Name="Indice" />
+          </Key>
+          <Property Name="Ganancias" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="Perdidas" Type="Decimal" Precision="15" Scale="2" />
           <Property Name="Indice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
       </Schema>
@@ -211,6 +229,15 @@
               <MappingFragment StoreEntitySet="dwGananciasTotales">
                 <ScalarProperty Name="Indice" ColumnName="Indice" />
                 <ScalarProperty Name="Monto" ColumnName="Monto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dwGananciasPerdidas">
+            <EntityTypeMapping TypeName="dwdashboardModel.dwGananciasPerdidas">
+              <MappingFragment StoreEntitySet="dwGananciasPerdidas">
+                <ScalarProperty Name="Indice" ColumnName="Indice" />
+                <ScalarProperty Name="Perdidas" ColumnName="Perdidas" />
+                <ScalarProperty Name="Ganancias" ColumnName="Ganancias" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
